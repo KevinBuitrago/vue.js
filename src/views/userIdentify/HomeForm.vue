@@ -50,6 +50,7 @@
 <script>
 
 import { usuarios } from '@/utils/users'
+import { setUserLogged } from '@/api/search'
 
 export default {
   name: 'MainForm',
@@ -76,6 +77,7 @@ export default {
         }
       }
       if (login) {
+        setUserLogged(login)
         this.$router.push({ name: 'dashboard', params: { id: '1' } })
       } else {
         alert('usuario o contraseña incorecta')

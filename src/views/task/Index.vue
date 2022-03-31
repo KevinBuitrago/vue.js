@@ -1,10 +1,12 @@
 <template>
-  <div class="taskTo-do">
+   <div class="home">
+    <div >
     <tablaTask/>
+    </div>
   </div>
 </template>
 <script>
-import tablaTask from '@/views/task/taskTodo/taskTodo.vue'
+import tablaTask from '@/views/task/taskTodo.vue'
 export default {
   name: 'TaskView',
   components: {

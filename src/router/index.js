@@ -7,7 +7,7 @@ const routerOptions = [
   { path: '/', name: 'userIdentify', meta: { showBreadcrumb: true } },
   { path: '/Dashboard', name: 'dashboard', meta: { showBreadcrumb: true } },
   { path: '/NewUser', name: 'dashboard', meta: { showBreadcrumb: true } },
-  { path: '/users/:id/todo', name: 'task/taskTodo', meta: { showBreadcrumb: true } },
+  { path: '/users/:id/todo', name: 'task', meta: { showBreadcrumb: true } },
   { path: '/NewTo-do', name: 'dashboard', meta: { showBreadcrumb: true } },
   { path: '*', redirect: { name: 'userIdentify' } }
 ]

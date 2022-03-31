@@ -127,7 +127,7 @@ export default {
         .catch()
     },
     goTaskTodo (id) {
-      this.$router.push({ name: 'task/taskTodo', params: { id } })
+      this.$router.push({ name: 'task', params: { id } })
     },
     createdUser () {
       this.form.id = this.idNew

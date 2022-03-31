@@ -5,6 +5,7 @@ import './plugins/bootstrapVue'
 import App from './App.vue'
 import router from '@/router/index'
 import store from '@/store/index'
+import { getUserLogged } from '@/api/search'
 
 import './assets/css/main.styl'
 
@@ -15,6 +16,9 @@ new Vue({
   store,
   methods: {
     init () {
+      if (getUserLogged()) {
+        this.$router.push({ name: 'dashboard', params: {} })
+      }
     }
   },
   created () {
