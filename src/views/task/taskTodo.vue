@@ -58,7 +58,9 @@ export default {
       toDo: null,
       isLoading: true,
       isCreateTask: true,
-      form: {}
+      form: {
+        name: ''
+      }
     }
   },
   methods: {
@@ -90,8 +92,8 @@ export default {
         completed: false
       }
       this.toDo.push(newTask)
-      console.log(this.toDo, 'melo caramelo')
       this.changeView(true)
+      this.form.name = ''
     },
     changeView (view) {
       this.isCreateTask = view
