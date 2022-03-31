@@ -1,38 +1,51 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="@/assets/img/logo.png">
-    <b-button v-on:click="getTask" >task Users</b-button>
+    <BaseLoading v-if="isLoading"/>
+    <div v-else>
+    <TablaD/>
+    </div>
   </div>
 </template>
 
 <script>
-import { getTask, getUsers } from '@/api/search'
+import BaseLoading from '@/components/BaseLoading'
+import { getTask } from '@/api/search'
+import TablaD from '@/views/dashboard/DashboardForm.vue'
 
 export default {
   name: 'HomeView',
+  data () {
+    return {
+      isLoading: false
+    }
+  },
   methods: {
-    fetchData () {
-      getUsers()
-        .then(({ data }) => {
-          console.log('esooo --->', data)
-        })
-        .catch()
-    },
     getTask () {
+      this.isLoading = true
       const id = '1'
       getTask({ id })
         .then(({ data }) => {
+          this.isLoading = false
           console.log('esooo --->', data)
         })
         .catch()
     }
   },
   created () {
-    this.fetchData()
   },
   components: {
+    BaseLoading,
+    TablaD
   }
-
 }
-
 </script>
+
+<style scoped>
+.home{
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #ffffff;
+    /* background-color: #15202b; */
+}
+</style>

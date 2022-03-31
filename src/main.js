@@ -1,24 +1,20 @@
-
 import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
+
+import './plugins/bootstrapVue'
 
 import App from './App.vue'
-import router from './router'
-import store from './store'
+import router from '@/router/index'
+import store from '@/store/index'
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './assets/css/main.styl'
 
-Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 
 new Vue({
   router,
   store,
   methods: {
-    // Nuestra función
     init () {
-      console.log('Hola 🌝')
     }
   },
   created () {

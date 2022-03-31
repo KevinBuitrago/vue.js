@@ -1,28 +1,23 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import login from '@/views/userIdentify/index.vue'
+import Router from 'vue-router'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
-    path: '/',
-    name: 'login',
-    component: login
-  },
-  {
-    path: '/Home',
-    name: 'Home',
-    component: () => import('@/views/dashboard/index.vue')
-  },
-  {
-    path: '/task',
-    name: 'task',
-    component: () => import('@/views/dashboard/index.vue')
-  }
+const routerOptions = [
+  { path: '/', name: 'userIdentify', meta: { showBreadcrumb: true } },
+  { path: '/Dashboard/', name: 'dashboard', meta: { showBreadcrumb: true } },
+  { path: '/task/:id/todo', name: 'task', meta: { showBreadcrumb: true } },
+  { path: '*', redirect: { name: 'userIdentify' } }
 ]
 
-const router = new VueRouter({
+const routes = routerOptions.map(r => {
+  return {
+    ...r,
+    component: () => import(`@/views/${r.name}/Index.vue`)
+  }
+})
+
+const router = new Router({
   routes
 })
 
