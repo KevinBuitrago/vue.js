@@ -9,11 +9,3 @@ export default {
   name: 'HomeTitle'
 }
 </script>
-<style scoped>
-  .my-6{
-    margin-top: 1.95rem !important;
-  }
-  .formB{
-  background-color: #15202b;
-}
-</style>

@@ -87,13 +87,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.formB{
-  background-color: #15202b;
-}
-.dateForm{
-      margin-bottom: 1em;
-
-}
-</style>
