@@ -1,28 +1,10 @@
 <template>
   <div class="container">
-    <HeaderBar/>
-
     <transition name="fade">
       <router-view/>
     </transition>
-
-    <FooterBar/>
-
   </div>
 </template>
-
-<script>
-// import HeaderBar from '@/components/HeaderBar/Index'
-// import FooterBar from '@/components/FooterBar/Index'
-
-// export default {
-//   name: 'MainLayout',
-//   components: {
-//     HeaderBar,
-//     FooterBar
-//   }
-// }
-</script>
 
 <style lang="stylus">
   .fade-enter-active {

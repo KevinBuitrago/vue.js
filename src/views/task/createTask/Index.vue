@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'TaskView',
+  name: 'CreaTeTaskView',
   components: { }
 }
 </script>

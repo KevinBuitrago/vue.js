@@ -1,9 +1,10 @@
 <template>
-  <div class="loading-wrapper text-center py-5">
+  <div class="loading-wrapper text-center loading-5">
     <div class="spinner-wrapper w-100">
       <b-spinner class="spinner" label="Loading..." :type="type" :variant="variant"/>
     </div>
-    <h1 class="my-5">Loading...</h1>
+    <h1 class="my-5" style="
+    color: blue;">Loading...</h1>
   </div>
 </template>
 
@@ -42,6 +43,10 @@ export default {
 </script>
 
 <style lang="stylus">
+.loading-5{
+  padding-bottom: 11rem !important;
+  padding-top: 11.5rem !important;
+  }
   .spinner-wrapper
     .spinner
       width 4rem
