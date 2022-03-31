@@ -55,10 +55,7 @@ export default {
   name: 'MainForm',
   data () {
     return {
-      form: {
-        battleTag: '',
-        region: 'eu'
-      }
+      form: {}
     }
   },
   computed: {
